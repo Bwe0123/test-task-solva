@@ -9,7 +9,7 @@ const app = express();
 
 const PORT = process.env.PORT;
 const mongodb = process.env.MONGODB
-
+const JWT_SECRET=processs.env.JWT_SECRET
 
 mongoose.connect(mongodb, {
   useNewUrlParser: true,
@@ -33,7 +33,6 @@ app.use(bodyParser.json());
 
 app.post('/register', async (req, res) => {
   const { username, password } = req.body;
-
   if (!username || !password) {
     return res.status(400).json({ message: 'Введите имя пользователя и пароль' });
   }
