@@ -28,7 +28,7 @@ const User = mongoose.model('User', UserSchema);
 
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://frontend-six-iota-57.vercel.app/',
   methods: ['GET', 'POST', 'PUT'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
