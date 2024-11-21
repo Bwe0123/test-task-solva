@@ -9,7 +9,7 @@ const app = express();
 
 const PORT = process.env.PORT;
 const mongodb = process.env.MONGODB
-const JWT_SECRET=processs.env.JWT_SECRET
+const JWT_SECRET=process.env.JWT_SECRET
 
 mongoose.connect(mongodb, {
   useNewUrlParser: true,
@@ -28,7 +28,7 @@ const User = mongoose.model('User', UserSchema);
 
 
 app.use(cors({
-  origin: 'http://localhost:3000/',
+  origin: 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
